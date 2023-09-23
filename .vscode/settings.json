@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "ARRAY-DS.C": "cpp"
+        "ARRAY-DS.C": "cpp",
+        "ARRAY-DS1.C": "cpp"
     }
 }
