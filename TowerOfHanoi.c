@@ -3,7 +3,7 @@
 //TOWER OF HANOI
 //here the source is A,auxillary is B and the destination is C. Bigger valued disk can never be put on the
 //smaller valued disk
-void hanoi(int num,char sor,char aux,char dest)
+void hanoi(int num,char sor,char dest,char aux)
 {
     if(num==0||num<0)
     {
@@ -11,11 +11,11 @@ void hanoi(int num,char sor,char aux,char dest)
     }
     else if(num==1)
     {
-        printf("Move the %d from %c to %c.",num,sor,dest);
+        printf("Move the %d from %c to %c.\n",num,sor,dest);
     }
     else{
-        hanoi(num-1,sor,dest,aux);
-        printf("Move the %d from %c to %c.",num,sor,dest);
+        hanoi(num-1,sor,aux,dest);
+        printf("Move the %d from %c to %c.\n",num,sor,dest);
         hanoi(num-1,aux,dest,sor);
     }
     
@@ -23,11 +23,11 @@ void hanoi(int num,char sor,char aux,char dest)
 
 int main(){
     int line;
-    char A,B,C;
+    char sor='A',aux='B',dest='C';
 
     printf("Enter the no of line:");
-    sancf("%d",&line);
-    hanoi(line,A,B,C);
+    scanf("%d",&line);
+    hanoi(line,sor,dest,aux);
 
     
     return 0;
