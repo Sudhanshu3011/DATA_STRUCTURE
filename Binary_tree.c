@@ -8,10 +8,11 @@ struct node {
 struct node *createnode(int data)
 {
     struct node *new;
-    new= (struct node*)malloc(sizeof(struct node));
-    new->data=data;
-    new->left=NULL;
-    new->right=NULL;
+    new= (struct node*)malloc(sizeof(struct node));//allocating the size dynamically
+    new->data=data;//data
+    new->left=NULL;//linking the left 
+    new->right=NULL;//linking the right
+    return new;
 }
 int main()
 {
