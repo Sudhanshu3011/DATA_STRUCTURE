@@ -104,12 +104,5 @@ int main()
         printf("The tree is not BST.\n");
     }
     printf("%d",s->right->right->data);
-
-    //       18
-    //      /  \
-    //     7    45
-    //   /  \   /
-    //  4    8 20
-
     return 0;
 }
