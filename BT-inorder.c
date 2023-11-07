@@ -21,11 +21,7 @@ void inorder(struct node *root)
     {
          inorder(root->left);
          printf("%d ", root->data);
-         inorder(root->right);
-         
-       
-       
-       
+         inorder(root->right);  
     }
 }
 int main()
