@@ -5,6 +5,7 @@
         "ADT.C": "cpp",
         "LINEARSEARCH.C": "cpp",
         "DD-LL2.C": "cpp",
-        "DD-LL3.C": "cpp"
+        "DD-LL3.C": "cpp",
+        "DD-LL4.C": "cpp"
     }
 }
