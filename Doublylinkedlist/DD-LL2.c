@@ -11,6 +11,7 @@ struct node
 struct node *createnew(int data)
 {
     struct node *new;
+    
     new = (struct node *)malloc(sizeof(struct node));
     new->data = data;
     new->next = new->pre = NULL;
