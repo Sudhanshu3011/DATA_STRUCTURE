@@ -66,6 +66,7 @@ int main()
 
     first->data = 2;
     first->next = second;
+    
     first->pre = head;
 
     second->data = 3;
