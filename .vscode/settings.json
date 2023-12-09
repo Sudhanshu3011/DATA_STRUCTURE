@@ -3,6 +3,7 @@
         "ARRAY-DS.C": "cpp",
         "ARRAY-DS1.C": "cpp",
         "ADT.C": "cpp",
-        "LINEARSEARCH.C": "cpp"
+        "LINEARSEARCH.C": "cpp",
+        "DD-LL2.C": "cpp"
     }
 }
