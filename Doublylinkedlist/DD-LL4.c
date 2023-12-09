@@ -54,6 +54,7 @@ struct node *delatind1(struct node *head, int index)
 void *trasversalf(struct node *ptr)
 {
     printf("Trasvering in forward didection\n");
+    
     do
     {
         printf("Element :%d\n", ptr->data);
