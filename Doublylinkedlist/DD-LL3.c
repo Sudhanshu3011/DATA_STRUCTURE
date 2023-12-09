@@ -52,6 +52,7 @@ int main()
 {
     struct node *head;
     struct node *first;
+    
     struct node *second;
     struct node *third;
     head = (struct node *)malloc(sizeof(struct node));
