@@ -28,26 +28,14 @@ struct node *delatlast(struct node *head)
 }
 int *trasversalf(struct node *ptr)
 {
-    printf("Trasvering in forward didection\n");
+    printf("Trasvering in forward direction\n");
     do
     {
         printf("Element :%d\n", ptr->data);
         ptr = ptr->next;
     } while (ptr != NULL);
 }
-int *trasversalb(struct node *ptr)
-{
-    while (ptr->next != NULL)
-    {
-        ptr = ptr->next;
-    }
-    printf("Trasvering in backward didection\n");
-    do
-    {
-        printf("Element :%d\n", ptr->data);
-        ptr = ptr->pre;
-    } while (ptr != NULL);
-}
+
 int main()
 {
     struct node *head;
@@ -75,10 +63,13 @@ int main()
     third->data = 4;
     third->next = NULL;
     third->pre = second;
-    head = delatlast(head);
-
+    printf("Before deletion.");
     trasversalf(head);
-    trasversalb(head);
+
+    head = delatlast(head);
+    
+    printf("After deletion.");
+    trasversalf(head);
 
     return 0;
 }
