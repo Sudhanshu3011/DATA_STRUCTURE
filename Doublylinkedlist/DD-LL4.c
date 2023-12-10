@@ -10,9 +10,10 @@ struct node
 
 struct node *delatind1(struct node *head, int index)
 {
+    printf("Here the index is %d.\n",index);
     struct node *p = head;
     struct node *ptr = NULL;
-    int ind = 0;
+    int ind = 1;
 
     if (index == 1)
     {
@@ -25,7 +26,7 @@ struct node *delatind1(struct node *head, int index)
         return head;
     }
 
-    while (ind < index - 1 && p != NULL)
+    while (ind < index-1  && p != NULL)
     {
         ptr = p;
         p = p->next;
@@ -53,7 +54,7 @@ struct node *delatind1(struct node *head, int index)
 
 void *trasversalf(struct node *ptr)
 {
-    printf("Trasvering in forward didection\n");
+    printf("Trasvering in forward direction\n");
     
     do
     {
@@ -67,7 +68,7 @@ void *trasversalb(struct node *ptr)
     {
         ptr = ptr->next;
     }
-    printf("Trasvering in backward didection\n");
+    printf("Trasvering in backward direction\n");
     do
     {
         printf("Element :%d\n", ptr->data);
@@ -100,10 +101,13 @@ int main()
     third->data = 4;
     third->next = NULL;
     third->pre = second;
+    printf("Before deletion:");
+    
+    trasversalf(head);
     head = delatind1(head, 3);
 
+    printf("After deletion:");
     trasversalf(head);
-    trasversalb(head);
 
     return 0;
 }
