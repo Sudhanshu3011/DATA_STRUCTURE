@@ -11,7 +11,6 @@ struct node
 struct node *createnew(int data)
 {
     struct node *new;
-    
     new = (struct node *)malloc(sizeof(struct node));
     new->data = data;
     new->next = new->pre = NULL;
@@ -20,6 +19,7 @@ struct node *createnew(int data)
 }
 struct node *insertatlast(struct node *head, int data)
 {
+    printf("The element inserted is %d.\n",data);
     struct node *newhead = createnew(data);
     struct node *ptr = head;
     newhead->next = NULL;
@@ -35,7 +35,7 @@ struct node *insertatlast(struct node *head, int data)
 }
 int *trasversalf(struct node *ptr)
 {
-    printf("Trasvering in forward didection\n");
+    printf("Trasvering in forward direction\n");
     do
     {
         printf("Element :%d\n", ptr->data);
@@ -48,7 +48,7 @@ int *trasversalb(struct node *ptr)
     {
         ptr = ptr->next;
     }
-    printf("Trasvering in backward didection\n");
+    printf("Trasvering in backward direction\n");
     do
     {
         printf("Element :%d\n", ptr->data);
@@ -81,10 +81,13 @@ int main()
     third->data = 4;
     third->next = NULL;
     third->pre = second;
+    printf("Before insertion.\n");
+    trasversalf(head);
+    
     head = insertatlast(head, 0);
 
+    printf("After insertion.\n");
     trasversalf(head);
-    trasversalb(head);
 
     return 0;
 }
